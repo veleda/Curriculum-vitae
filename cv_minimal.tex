@@ -1,0 +1,267 @@
+\documentclass[8pt]{article}
+\usepackage{array, xcolor, lipsum, bibentry}
+\usepackage[margin=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{marvosym}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+
+% Margin rules
+\addtolength{\oddsidemargin}{-1.5cm}
+\addtolength{\evensidemargin}{-1.5cm}
+\addtolength{\textwidth}{1.5cm}
+
+\addtolength{\topmargin}{-4.8cm}
+\addtolength{\textheight}{6cm}
+
+
+% The font
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+
+\pagenumbering{gobble}
+
+% Setting color for the theme
+\newcommand\mycolor{violet}
+
+
+% Custom itemize dot
+\newcommand\mybox{\begin{tikzpicture}
+  \node[star, fill=\mycolor, inner sep=1.5pt] {};
+\end{tikzpicture}}
+
+\renewcommand{\labelitemi}{\mybox}
+
+
+% Your name
+\title{\Huge Boba Fett}
+\date{} % Removes the date
+
+% Margins for tables
+\newcolumntype{L}{>{\raggedleft}p{0.2\textwidth}}
+\newcolumntype{R}{p{0.8\textwidth}}
+\newcommand\VRule{\color{\mycolor}\vrule width 0.7pt}
+
+% Placing title
+\begin{document}
+\begin{minipage}{0.65\textwidth}
+\begingroup
+\let\center\flushleft
+\let\endcenter\endflushleft
+\maketitle
+\endgroup
+\end{minipage}
+% Placing image
+\begin{minipage}{0.4\textwidth}
+\vspace{2cm}
+\flushright\fbox{{\includegraphics[width=3.5cm]{img/profile.jpg}}}
+\end{minipage}
+
+
+\vspace{-2cm}
+\begin{minipage}{0.4\textwidth}
+\noindent \Letter \hspace{2 mm} Derem City, Kamino\\
+\MVAt \hspace{2 mm} boba@fett.ka\\
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+bobafettiscool.ka\\
+\Mobilefone \hspace{2 mm} (+00) 111 11 111
+\end{minipage}
+
+
+\vspace{2.2cm}
+\begin{itemize}
+\item
+Something nice about me 3
+\item
+\vspace{-1.2cm}
+Something nice about me 2
+\item
+\vspace{-1.2cm}
+Something nice about me 1
+\end{itemize}
+
+\vspace{0.6cm}
+
+% Education
+\section*{\textcolor{\mycolor}{\large{Education}}}
+\begin{tabular}{L!{\VRule}R}
+1998--2004&Bachelor's degree, { \bf in something}\\ & { \it Department of Bounty Hunting, Univeristy of Kamino}\\
+\end{tabular}
+ 
+\vspace{-0.5cm}
+
+% Experience
+\section*{\textcolor{\mycolor}{\large{Experience}}}
+\begin{tabular}{L!{\VRule}R}
+Jun 2014--{\it present}&{\bf Bounty Hunter}, Vader \& Co\\
+&Some text\\
+\\
+Feb 1997--May 1998&{\bf Cantina Worker}, Mos Eisley Cantina, Tatooine\\
+&Some text\\
+\\
+Nov 1995--Mar 1996&{\bf Bounty Hunter}, Jango Fett \& Co\\
+&Some text\\
+\\
+Mar 1990--Apr 1995&{\bf Library Assistand}, Tipoca City\\
+&Some text\\
+\end{tabular}
+
+\vspace{-0.5cm}
+
+% Box settings
+\tikzset {
+	colored/.style={fill=\mycolor!60},
+	faded/.style={fill=\mycolor!30}
+}
+
+% Skills
+\section*{\textcolor{\mycolor}{\large{Skills}} \hspace{12cm}\normalsize{Current: }
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\end{tikzpicture}
+\hspace{10pt}
+\normalsize{Goal: }
+\begin{tikzpicture}
+\draw[faded] (0,0) rectangle (0.3,0.3);
+\end{tikzpicture}
+}
+\begin{minipage}{0.35\textwidth}
+\begin{center}
+\begin{tabular}{ll}
+Hunting&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[faded] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Shooting&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[faded] (0.6,0) rectangle (0.9,0.3);
+\draw[faded] (0.9,0) rectangle (1.2,0.3);
+\draw[faded] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Java&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[faded] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+C++&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+\end{tabular}
+\end{center}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{0.3\textwidth}
+\begin{center}
+\begin{tabular}{ll}
+MS Office&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[faded] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+\LaTeX&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[faded] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+OS: Linux&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+OS: Windows&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+\end{tabular}
+\end{center}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{0.3\textwidth}
+\begin{center}
+\begin{tabular}{ll}
+Bash&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[faded] (0.6,0) rectangle (0.9,0.3);
+\draw[faded] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Make&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[] (0.6,0) rectangle (0.9,0.3);
+\draw[] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Flute&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[faded] (0.6,0) rectangle (0.9,0.3);
+\draw[faded] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Guitar&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[faded] (0.6,0) rectangle (0.9,0.3);
+\draw[] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+\end{tabular}
+\end{center}
+\end{minipage}
+
+% Organisations
+\section*{\textcolor{\mycolor}{\large{Organisations}}}
+
+\begin{tabular}{ll}
+2014-{\it present}&{\bf Deputy}, Fett and friends\\
+\vspace{-0.2cm}
+1999--2000&\textbf{Leader}, Students of Hunting\\
+\end{tabular}
+
+% References
+\section*{\textcolor{\mycolor}{\large{References}}}
+\begin{tabular}{lll}
+Darth Vader&\textit{ruler of something}, Death Star, in space&(+11) 000 00 000\\
+Someone&\textit{something}, Somewhere& (+00) 000 00 000\\
+\end{tabular}
+
+ 
+
+ 
+\end{document}
