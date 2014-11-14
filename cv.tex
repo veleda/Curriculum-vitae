@@ -1,0 +1,238 @@
+\documentclass[8pt]{article}
+\usepackage[margin=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{array, graphicx, marvosym, tikz}
+
+\usepackage{lipsum}
+
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+
+\pagenumbering{gobble}
+
+
+ 
+\title{\Huge Boba Fett}
+\author{}
+\date{}
+ 
+%%% Color theme of CV
+\newcommand\mycolor{teal}
+
+%%% Margins for columns
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.25\textwidth}}
+\newcolumntype{R}{p{\textwidth}}
+\newcommand\VRule{\color{\mycolor}\vrule width 0.7pt}
+
+
+ 
+\begin{document}
+
+%%% Making title at top left of page
+\begin{minipage}{0.65\textwidth}
+\begingroup
+\let\center\flushleft
+\let\endcenter\endflushleft
+\maketitle
+\endgroup
+\end{minipage}
+%%% Edit your profile image
+\begin{minipage}{0.4\textwidth}
+\flushright{\includegraphics[width=3.5cm]{img/profile.jpg}}
+\end{minipage}
+
+%%% Information
+\vspace{5mm}
+\begin{minipage}{0.4\textwidth}
+\noindent \Letter \hspace{2 mm} Derem City, Kamino\\
+\MVAt \hspace{2 mm} boba@fett.ka\\
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+\vspace{-0.3cm}
+\Mobilefone \hspace{2 mm} (+00) 111 11 111\\
+bobafettiscool.ka
+\end{minipage}
+
+%%% Education
+\section*{\textcolor{\mycolor}{Education}}
+\begin{tabular}{L!{\VRule}R}
+1998--2004&Bacherlor's degree, in something\\ &\textit{Department of Bounty Hunting, Univeristy of Kamino}\\
+&Some text
+\end{tabular}
+ 
+
+%%% Experience
+\section*{\textcolor{\mycolor}{Experience}}
+\begin{tabular}{L!{\VRule}R}
+Jun 2004--\textit{present}&{\bf Bounty Hunter}, Vader \& Co\\
+&Some text\\
+\\
+Feb 1997--May 1998&{\bf Cantina Worker}, Mos Eisley Cantina, Tatooine\\
+&Some text\\
+\\
+Nov 1995--Mar 1996&{\bf Bounty Hunter}, Jango Fett \& Co\\
+&Some text\\
+\\
+Mar 1990--Apr 1995&{\bf Library Assistant}, Tipoca City\\
+& Some text\\
+\end{tabular}
+
+
+%%% Settings for boxes
+\tikzset {
+	colored/.style={fill=\mycolor!60},
+	faded/.style={fill=\mycolor!30}
+}
+
+%%% Skills
+\section*{\textcolor{\mycolor}{\Large{Skills}} \hspace{9cm}\normalsize{Current: }
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\end{tikzpicture}
+\hspace{10pt}
+\normalsize{Goal: }
+\begin{tikzpicture}
+\draw[faded] (0,0) rectangle (0.3,0.3);
+\end{tikzpicture}
+}
+
+\begin{minipage}{0.35\textwidth}
+\begin{center}
+\begin{tabular}{ll}
+Hunting&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[faded] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Shooting&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[faded] (0.6,0) rectangle (0.9,0.3);
+\draw[faded] (0.9,0) rectangle (1.2,0.3);
+\draw[faded] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Java&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[faded] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+C++&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+\end{tabular}
+\end{center}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{0.3\textwidth}
+\begin{center}
+\begin{tabular}{ll}
+MS Office&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[faded] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+\LaTeX&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[faded] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+OS: Linux&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+OS: Windows&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[colored] (0.6,0) rectangle (0.9,0.3);
+\draw[colored] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+\end{tabular}
+\end{center}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{0.3\textwidth}
+\begin{center}
+\begin{tabular}{ll}
+Bash&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[faded] (0.6,0) rectangle (0.9,0.3);
+\draw[faded] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Make&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[] (0.6,0) rectangle (0.9,0.3);
+\draw[] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Flute&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[faded] (0.6,0) rectangle (0.9,0.3);
+\draw[faded] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+Guitar&
+\begin{tikzpicture}
+\draw[colored] (0,0) rectangle (0.3,0.3);
+\draw[colored] (0.3,0) rectangle (0.6,0.3);
+\draw[faded] (0.6,0) rectangle (0.9,0.3);
+\draw[] (0.9,0) rectangle (1.2,0.3);
+\draw[] (1.2,0) rectangle (1.5,0.3);
+\end{tikzpicture}\\
+\end{tabular}
+\end{center}
+\end{minipage}
+
+\section*{\textcolor{\mycolor}{Languages}}
+\begin{tabular}{L!{\VRule}R}
+Kaminoan&Native language\\
+Galactic Standard& Fluent\\
+Huttese&Fluent\\
+\end{tabular}
+
+\section*{\textcolor{\mycolor}{Organisations}}
+\begin{tabular}{L!{\VRule}R}
+2014--\textit{present}&{\bf Deputy}, Fett and friends\\
+\\
+1999--2000&{\bf Leader}, Students of hunting\\
+&Some text\\
+\end{tabular}
+
+\section*{\textcolor{\mycolor}{Interests}}
+Brewing beer, aviation, hunting for bounties\\
+
+ 
+
+ 
+\end{document}
